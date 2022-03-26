@@ -101,6 +101,10 @@ target_include_directories(sol2 ${sol2-system-include}
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 	$<INSTALL_INTERFACE:include>)
 
+set_target_properties(sol2
+	PROPERTIES
+	EXPORT_NAME sol2::sol2)
+
 # # Version configurations
 configure_package_config_file(
 	cmake/sol2-config.cmake.in
